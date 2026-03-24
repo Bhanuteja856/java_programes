@@ -1,0 +1,30 @@
+import java.util.*;
+// import java.Array
+class program6{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0;i<n;i++){arr[i]=scan.nextInt();}
+        int[] brr = new int[n];
+        int newsize = 0;
+        for(int i=0;i<n;i++){
+            boolean isdup = false;
+            for(int j=0;j<newsize;j++){
+                if(arr[i]==brr[j]){
+                    isdup = true;
+                    break;
+                }
+            }
+            if(!isdup){
+                brr[newsize]=arr[i];
+                newsize++;
+            }
+        }
+        System.out.println(" THE ELEMETS AFTER DUPLICATES");
+        for(int i=0;i<newsize;i++){System.out.print(brr[i]+" ");}
+        
+        
+        
+    }
+}
