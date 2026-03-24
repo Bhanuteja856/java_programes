@@ -1,0 +1,24 @@
+import java.util.*;
+class program2{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("ENTER THE RANGE : ");
+        int n = scan.nextInt();
+        int a = 0,b = 1, sum = 0, next;
+        if(a <= n){
+            System.out.println(" FIRST : " + n);
+        }
+        if(b <= n){ System.out.println(" second : " + n);}
+        System.out.print("THE FIBONACIIE SERIES IS : ");
+        while(true){
+            next = a+b;
+            if(next > n){ break;}
+            System.out.print(next + " ");
+            if(next%2==0){ sum+=next;}
+            a = b;
+            b = next;
+        }
+        
+        System.out.print("\nTHE SUM IS : " + sum);
+    }
+}
