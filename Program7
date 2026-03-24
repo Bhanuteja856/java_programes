@@ -1,0 +1,52 @@
+import java.util.*;
+// import java.Array
+class person{
+    String name,gender;
+    int age;
+    String Degree,Branch;
+    int year;
+    Scanner sc = new Scanner(System.io);
+    void readpersonaldetails(){
+        System.out.println("ENTER PERSONAL DETAILS : ");
+        System.out.println("ENTER NAME : ");
+        name = nextLine();
+        System.out.println("ENTER GENDER : ");
+        gender = nextLine();
+        System.out.println("ENTER AGE : ");
+        age = nextInt();        
+    }
+    void readqualificationdetails(){
+        System.out.println("ENTER PERSONAL DETAILS : ");
+        System.out.println("ENTER Degree : ");
+        Degree = nextLine();
+        System.out.println("ENTER Branch : ");
+        Branch = nextLine();
+        System.out.println("ENTER Year : ");
+        year = nextInt();        
+    }
+    void Displaypersonaldetails(){
+        System.out.println("PERSONAL DETAILS : ");
+        System.out.println("  NAME : " + name);
+        // name = nextLine();
+        System.out.println("GENDER : " + gender);
+        // gender = nextLine();
+        System.out.println(" AGE : " + age);
+        // age = nextInt();        
+    }
+    void Displayqualificationdetails(){
+        System.out.println("PERSONAL DETAILS : ");
+        System.out.println("Degree : "+ Degree);
+        // Degree = nextLine();
+        System.out.println(" Branch : "+Branch);
+        // Branch = nextLine();
+        System.out.println(" Year : "+year);
+        // year = nextInt();        
+    }
+    public static void main(String[] args){
+        person p = new person();
+        p.readpersonaldetails();
+        p.readqualificationdetails();
+        p.Displaypersonaldetails();
+        p.Displayqualificationdetails();
+    }
+}
