@@ -1,0 +1,27 @@
+import java.util.*;
+class program3{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int a = n;
+        int sum  = 0;
+        int size = 0;
+        while(a>0){
+            int c = a%10;
+            size++;
+            a/=10;
+        }
+        int x = n;
+        while(n>0){
+            int c = n%10;
+            sum+=Math.pow(c,size);
+            n/=10;
+        }
+        if(x==sum){
+            System.out.print("THE NUMBER IS ARMSTRONG NUMBER");
+        }
+        else{
+            System.out.print("THE NUMBER IS NOT A ARMSTRONG NUMBER");
+        }
+    }
+}
