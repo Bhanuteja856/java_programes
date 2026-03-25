@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class programe11
+{
+	public static void main(String[] args){
+	    Scanner sc= new Scanner(System.in);
+	    String s = sc.nextLine();
+	    int max_count = 0;
+	    char max_char = ' ';
+	    for(auto i : s){
+	        int cnt = 0;
+	        for(char j : s){
+	            if(i==s){
+	                cnt++;
+	            }
+	        }
+	        if(cnt >= max_count){
+	            max_count = cnt;
+	            max_char = i;
+	        }
+	    }
+	    System.out.println("THE MAX COUNT IS : "+max_count);
+	    System.out.println("THE MAX COUNTED CHARACER IS : " + max_char);
+	}
+}
