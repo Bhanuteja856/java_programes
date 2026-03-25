@@ -1,0 +1,39 @@
+// First Parent Interface
+interface Camera {
+    void takePhoto();
+}
+
+// Second Parent Interface
+interface MusicPlayer {
+    void playMusic();
+}
+
+// Child Class implementing BOTH interfaces
+class SmartPhone implements Camera, MusicPlayer {
+    
+    // Must provide implementation for Camera method
+    public void takePhoto() {
+        System.out.println("Capturing a high-resolution photo...");
+    }
+
+    // Must provide implementation for MusicPlayer method
+    public void playMusic() {
+        System.out.println("Playing your favorite playlist...");
+    }
+
+    // Specific method for the Child class
+    void makeCall() {
+        System.out.println("Calling Mom...");
+    }
+}
+
+public class MultipleInheritanceDemo {
+    public static void main(String[] args) {
+        SmartPhone myPhone = new SmartPhone();
+
+        // Accessing methods from both "parents"
+        myPhone.takePhoto();   // From Camera
+        myPhone.playMusic();   // From MusicPlayer
+        myPhone.makeCall();    // From SmartPhone itself
+    }
+}
