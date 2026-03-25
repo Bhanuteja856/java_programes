@@ -1,0 +1,32 @@
+// Level 1: The Grandparent Class
+class Device {
+    void powerOn() {
+        System.out.println("Device is powering on...");
+    }
+}
+
+// Level 2: The Parent Class (Inherits from Device)
+class Computer extends Device {
+    void bootOS() {
+        System.out.println("Booting Operating System...");
+    }
+}
+
+// Level 3: The Child Class (Inherits from Computer)
+class Laptop extends Computer {
+    void checkBattery() {
+        System.out.println("Battery is at 85%.");
+    }
+}
+
+public class MultiInheritanceDemo {
+    public static void main(String[] args) {
+        // Create an object of the bottom-most class
+        Laptop myLaptop = new Laptop();
+
+        // Accessing methods from all levels of the hierarchy
+        myLaptop.powerOn();     // From Device (Level 1)
+        myLaptop.bootOS();      // From Computer (Level 2)
+        myLaptop.checkBattery(); // From Laptop (Level 3)
+    }
+}
